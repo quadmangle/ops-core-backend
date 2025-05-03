@@ -1,0 +1,13 @@
+# File: requirements.txt
+
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-jose==3.3.0
+python-dotenv==1.0.1
+asyncpg==0.29.0
+pydantic==2.7.1
+
+# Optional security tools
+bandit==1.7.6
+pre-commit==3.7.0
+detect-secrets==1.4.0
