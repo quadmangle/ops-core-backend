@@ -11,3 +11,7 @@ pydantic==2.7.1
 bandit==1.7.6
 pre-commit==3.7.0
 detect-secrets==1.4.0
+
+sqlalchemy
+asyncpg
+databases
