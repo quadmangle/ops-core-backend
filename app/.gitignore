@@ -1,0 +1,23 @@
+# File: .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.env
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Bytecode
+*.pyc
+
+# IDE
+.vscode/
+.idea/
