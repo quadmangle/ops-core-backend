@@ -15,3 +15,5 @@ detect-secrets==1.4.0
 sqlalchemy
 asyncpg
 databases
+passlib[bcrypt]
+python-jose
