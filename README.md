@@ -80,4 +80,4 @@ backend/
 ---
 
 ## 🧠 Contributors
-Built and maintained by [Your Team Name or Your Handle]
+Built and maintained by [Ignite00G]
