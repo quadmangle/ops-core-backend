@@ -1,11 +1,8 @@
 # File: backend/app/main.py
 
-try:
-    from fastapi import FastAPI
-    from app.routes.auth import auth_router
-    from app.routes.users import user_router
-except ModuleNotFoundError as e:
-    raise ImportError("Critical dependency missing. Ensure FastAPI and its dependencies like 'ssl' are properly installed in your environment.") from e
+from fastapi import FastAPI
+from app.routes.auth import auth_router
+from app.routes.users import user_router
 
 app = FastAPI(title="OPS Core Secure API")
 

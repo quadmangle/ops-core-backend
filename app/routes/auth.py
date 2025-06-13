@@ -15,7 +15,6 @@ JWT_ALGORITHM = "HS256"
 class SignupInput(BaseModel):
     email: EmailStr
     password: str
-    invite_code: str  # TODO: replace with secure system
 
 class LoginInput(BaseModel):
     email: EmailStr
@@ -23,10 +22,6 @@ class LoginInput(BaseModel):
 
 @router.post("/signup")
 async def signup_user(payload: SignupInput):
-    # Fake invite code check
-    if payload.invite_code != "SECRET123":
-        raise HTTPException(status_code=403, detail="Invalid invite code")
-
     query = users.select().where(users.c.email == payload.email)
     existing = await database.fetch_one(query)
     if existing:
@@ -40,7 +35,7 @@ async def signup_user(payload: SignupInput):
         is_admin=False
     )
     await database.execute(create_query)
-    return {"message": "User created successfully. Await admin activation."}
+    return {"message": "User created successfully."}
 
 @router.post("/login")
 async def login_user(payload: LoginInput):

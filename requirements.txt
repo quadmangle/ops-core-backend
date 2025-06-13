@@ -13,7 +13,5 @@ pre-commit==3.7.0
 detect-secrets==1.4.0
 
 sqlalchemy
-asyncpg
 databases
 passlib[bcrypt]
-python-jose
